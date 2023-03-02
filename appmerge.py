@@ -10,7 +10,7 @@ class Ui_Form(object):
     def setupUi(self, Form):
         Form.setObjectName("Appmerge")
         Form.resize(1200, 690)
-        icn = QtGui.QIcon('a.ico')
+        icn = QtGui.QIcon('icon.ico')
         Form.setWindowIcon(icn)
         font = QtGui.QFont()
         font.setFamily("Open Sans")
@@ -188,7 +188,7 @@ class App_Window(QMainWindow, Ui_Form):
         wb.save(file[0])
 
     def mail(self):
-        template = "a.docx"
+        template = "res/template.docx"
         document = MailMerge(template)
         file = QFileDialog.getSaveFileName(self, 'Enregistrer Fichier', str(self.m.text()),
                                            ("Word file (*.docx)"))
